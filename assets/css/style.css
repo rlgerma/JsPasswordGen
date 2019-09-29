@@ -1,18 +1,62 @@
-.html{
+html {
     max-width: 100%;
     height: auto;
 
 }
 
-.body{
+body {
     max-width: 100%;
     height: auto;
+    background-image: url("cork-board.png");
 }
 
-.h1{
+.container{
+    width: 50%;
+    margin:auto;
+    border: silver;
+    border-width: 12px;
+    border-style:ridge;  
+    margin-top: 10%;
+      
+
+}
+
+.top1 { 
+    
     text-align: center;
-    font-size:32px;
-    color: royalblue;
-    background-color: rosybrown;
-    transition: all, .5s;
+    font-size:80px;
+    color: gainsboro;
+    background-color: teal;
+    transition: ease all, .5s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.top2{
+    
+    text-align: center;
+    font-size:40px;
+    color: gainsboro;
+    background-color: #666677;
+    transition: ease all, 1s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+textarea{
+    width:50%;
+    margin-left: 24.8%;
+    height:auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-top:2%;
+}
+
+button {
+    margin:auto;
+    font-size: 32px;
+    color: gainsboro;
+    background-color: teal;
+    margin-left:30%;
+    margin-right:-25%;
+    padding: 20px;
 }
