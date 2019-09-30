@@ -8,8 +8,6 @@ var num2 = 32;
 
 var yes = true;
 
-var textAreaEl = document.getElementById("form[3]");
-
 function theNewPass(){
     
     console.log(size)
@@ -50,40 +48,49 @@ function passwordGenSymbol() {
     return (newPassSymbol);
 };
 
-
+function copyTextEl() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Copied the text: " + copyText.value);
+  }
 
 var welcome = confirm("Welcome to Password Generator! Please enter all information in the boxes either 'yes' or 'no'");
 if (welcome == true){    
     size = prompt("How many characters long will your password be? 5-32 characters accepted");
     if (size >= 5 && size <= 32){        
         theNewPass();
-          
+        
     }
         
     else {
         alert("needs to be 5-32 numbers");
         
+    
         
     } 
     
     var symbolAsk = prompt("Want special characters?");
-    if (symbolAsk == "yes"){
+    if (symbolAsk == "yes" && size >= 5 && size <= 32){
         passwordGenSymbol();
         theNewPass();        
-        Element.setAttribute(textAreaEl, newPassSymbol);
-        
+        document.getElementById("password").innerHTML = newPassSymbol;
+         
         
         
     }
-    else if (symbolAsk == "no"){
-        passwordGen();
-        alert(newPass)
+    else if (size < 5 && size > 32 == true){
+        alert("nice try!");
     }
-    
-    else if (welcome || size || symbolAsk !== true) {
-        alert("Maybe another time!")
+     if (symbolAsk == "no" && size >= 5 && size <= 32){
+        passwordGen();        
+        document.getElementById("password").innerHTML = newPass;
+           
+       }
+    else if (welcome || size < 5 && size > 32 == true) {
+        alert("Enjoy!");
     
     }
 }
-// passwordGen();
-// alert(newPass)    
+   
