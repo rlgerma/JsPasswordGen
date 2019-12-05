@@ -67,6 +67,7 @@ function copyTextEl() {
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
     alert("Copied the text: " + copyText.value);
+    event.preventDefault();
 };
 var welcome = confirm("Welcome to Password Generator! Please enter all information in the boxes either 'yes' or 'no'");
 if (welcome == true){    
