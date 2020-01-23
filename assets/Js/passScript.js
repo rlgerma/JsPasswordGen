@@ -72,14 +72,16 @@ function copyTextEl() {
 var welcome = confirm("Welcome to Password Generator! Please enter all information in the boxes either 'yes' or 'no'");
 if (welcome == true){    
     size = prompt("How many characters long will your password be? 8-128 characters accepted");
-    if (size >= 8 && size <= 128){        
+    if (size >= 8 && size <= 128){   
+        passwordGen();     
         theNewPass();
+        document.getElementById("password").innerHTML = newPass;
     }
     else {
         alert("needs to be 8-128 numbers")
-        .clearfix();
+        .clearFix();
     }
-    var capsAsk = prompt("Would You like Capital letters included?(default is no caps)");
+    var capsAsk = prompt("Would You like Capital letters included?[('yes/no'");
 
     if(capsAsk == "yes" && size >= 8 && size <= 128){
         passwordGenCaps();
