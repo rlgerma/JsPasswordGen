@@ -1,3 +1,6 @@
+![JsPasswordGen](https://github.com/rlgerma92/JsPasswordGen/blob/master/assets/jspg.png)
+
+
 **Password Generator**
 
 This application is a resource for generating a secure password.
